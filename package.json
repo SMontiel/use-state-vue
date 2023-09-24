@@ -1,0 +1,26 @@
+{
+  "name": "use-state-vue",
+  "version": "0.0.0",
+  "description": "Simple useState() for Vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMontiel/use-state-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "useState",
+    "composable",
+    "composability"
+  ],
+  "author": "Salvador Montiel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SMontiel/use-state-vue/issues"
+  },
+  "homepage": "https://github.com/SMontiel/use-state-vue#readme"
+}
