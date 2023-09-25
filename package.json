@@ -2,10 +2,29 @@
   "name": "use-state-vue",
   "version": "0.0.0",
   "description": "Simple useState() for Vue",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs && tsc --emitDeclarationOnly",
+    "prepublish": "npm run build",
+    "publish": "npm publish --access public",
+    "tsc": "tsc --emitDeclarationOnly"
   },
+  "peerDependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "@babel/preset-typescript": "^7.22.15",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "rollup": "^3.29.3",
+    "typescript": "^5.2.2"
+  },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SMontiel/use-state-vue.git"
