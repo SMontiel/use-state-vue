@@ -46,9 +46,12 @@ dispatch({ type: 'increment' });</pre>
 <script setup lang="ts">
 import { useReducer } from 'use-state-vue-sm';
 
-const initialState = { count: 0 };
+type State = { count: number };
+type Action = { type: string };
 
-function reducer(state, action) {
+const initialState: State = { count: 0 };
+
+function reducer(state: State, action: Action): State {
   switch (action.type) {
     case 'increment':
       return { count: state.count + 1 };
@@ -59,5 +62,5 @@ function reducer(state, action) {
   }
 }
 
-const [state, dispatch] = useReducer(reducer, initialState);
+const [state, dispatch] = useReducer<State, Action>(reducer, initialState);
 </script>
