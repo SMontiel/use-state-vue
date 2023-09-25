@@ -4,6 +4,7 @@
 
     <div class="space-y-4">
       <UseStateCounter />
+      <UseReducerCounter />
 
       <NativeCounter />
     </div>
@@ -12,5 +13,6 @@
 
 <script setup lang="ts">
 import NativeCounter from './components/NativeCounter.vue';
+import UseReducerCounter from "./components/UseReducerCounter.vue";
 import UseStateCounter from './components/UseStateCounter.vue';
 </script>

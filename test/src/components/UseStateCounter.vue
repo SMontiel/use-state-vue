@@ -1,6 +1,7 @@
 <template>
   <div class="p-4 rounded border space-y-2">
-    <h2 class="text-2xl font-semibold">useState() function</h2>
+    <h2 class="text-2xl font-semibold">
+      <code class="bg-gray-200 px-2 rounded text-orange-600 font-mono">useState()</code> function</h2>
     <div class="flex justify-between items-center">
       <p>Count: <span class="font-bold text-xl">{{ count }}</span></p>
       <div class="space-x-4">
@@ -19,7 +20,7 @@
     <h3 class="text-lg font-semibold">Code:</h3>
     <article class="prose">
       <pre>
-import useState from 'use-state-vue';
+import { useState } from 'use-state-vue';
 
 const [count, setCount] = useState(0);
 setCount(count + 1);</pre>
@@ -28,7 +29,7 @@ setCount(count + 1);</pre>
 </template>
 
 <script setup lang="ts">
-import useState from 'use-state-vue-sm';
+import { useState } from 'use-state-vue-sm';
 
 const [count, setCount] = useState(0);
 </script>
